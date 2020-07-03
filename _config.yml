@@ -88,7 +88,7 @@ author:
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=IwNdFkoAAAAJ&hl=en"
   email            :
-  researchgate     : "https://www.researchgate.net/profile/Yuan_Liu101"
+  researchgate     : "Yuan_Liu101"
   uri              :
   bitbucket        :
   codepen          :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "github.com/lyjspx"
+  github           : "lyjspx"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/yuan-liu-0b573b129/"
+  linkedin         : "yuan-liu-0b573b129/"
   orcid            : 
   pinterest        :
   soundcloud       :
@@ -187,7 +187,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-
+  posts:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
