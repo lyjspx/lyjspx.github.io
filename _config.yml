@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Yuan's Site"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Yuan Liu"
 description              : &description "personal description"
 url                      : https://lyjspx.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=IwNdFkoAAAAJ&hl=en"
-  email            :
+  email            : 
   researchgate     : "Yuan_Liu101"
   uri              :
   bitbucket        :
@@ -185,7 +185,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 # Defaults
