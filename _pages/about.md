@@ -9,3 +9,5 @@ redirect_from:
 ---
 
 A personal blog recording any thoughts.
+
+Tried many personal or public tools (e.g. OneNote, Evernote, Google Site) before, and Github.io gives my best experience until now.

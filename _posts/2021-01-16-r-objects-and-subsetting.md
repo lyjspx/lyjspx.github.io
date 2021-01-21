@@ -1,7 +1,6 @@
 ---
 title: R objects and subsetting
 tags:
-- ''
 - R
 ---
 
