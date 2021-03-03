@@ -11,3 +11,5 @@ redirect_from:
 ## A personal blog recording any thoughts (See blog posts).
 
 Tried many personal or public tools (e.g. OneNote, Evernote, Google Site) before, and Github.io gives my best experience until now.
+
+## Collect problems and solution in experiences
