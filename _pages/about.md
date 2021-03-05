@@ -12,4 +12,7 @@ redirect_from:
 
 Tried many personal or public tools (e.g. OneNote, Evernote, Google Site) before, and Github.io gives my best experience until now.
 
-## Collect problems and solution in experiences
+
+
+## Leave your comments in repo issues
+[repo issues](https://github.com/lyjspx/lyjspx.github.io/issues)
