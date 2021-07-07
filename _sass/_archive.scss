@@ -53,14 +53,13 @@
 .page__content {
 
   .archive__item-title {
-    margin-top: 1em;
+    margin-top: none;
     border-bottom: none;
   }
 }
 
 .archive__item-excerpt {
-  margin-top: 0;
-  font-size: $type-size-6;
+  display: none;
 
   & + p {
     text-indent: 0;
@@ -147,7 +146,7 @@
 
     .archive__item-excerpt {
       display: block;
-      font-size: $type-size-6;
+      font-size: $type-size-8;
     }
   }
 }
