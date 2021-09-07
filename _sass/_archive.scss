@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .archive {
-  margin-bottom: 2em;
+  margin-bottom: 0.2em;
 
   @include breakpoint($medium) {
     @include span(12 of 12);
@@ -28,20 +28,23 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0;
-  padding-bottom: 0.5em;
+  margin: 1.5em 0 0;
+  padding-bottom: 0.05em;
   font-size: $type-size-5;
   color: mix(#fff, $gray, 25%);
   border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {
-    margin-top: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-block-start: 0em;
   }
 }
 
 .archive__item-title {
-  margin-bottom: 0.25em;
-  font-size: $type-size-3;
+  margin-bottom: 0em;
+  margin-top: 0em;
+  font-size: $type-size-5;
   font-family: $sans-serif-narrow;
 
   a + a {
@@ -103,7 +106,7 @@
   }
 
   .page__meta {
-    margin: 0 0 4px;
+    margin: 0 0 1px;
   }
 }
 
@@ -120,7 +123,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin-top: 0.1em;
     font-size: $type-size-5;
   }
 
