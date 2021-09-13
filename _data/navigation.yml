@@ -1,13 +1,15 @@
 # main links links
 main:
-  - title: "Blog Posts"
+  - title: "Posts By Year"
     url: /year-archive/
+    
+  - title: "Posts By Tags"
+    url: /tags/
     
   - title: "CV"
     url: /cv/
 
-  - title: "tags"
-    url: /tags/
+
 #  - title: "Publications"
 #    url: /publications/
 
