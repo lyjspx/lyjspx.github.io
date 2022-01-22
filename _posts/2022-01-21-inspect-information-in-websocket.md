@@ -1,6 +1,5 @@
 ---
 tags:
-- ''
 - web
 title: Inspect information in websocket
 ---
