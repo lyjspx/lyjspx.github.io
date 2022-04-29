@@ -9,6 +9,15 @@ author_profile: true
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
+    {% assign postCount = group_items[forloop.index0] | size %}
+      <i class="fa fa-book" aria-hidden="true"></i>
+      <a href="#{{ tag | slugify }}">{{tag}}&nbsp</a>
+      <span>{{postCount}} </span>
+           
+      <span>&nbsp&nbsp</span>
+{% endfor %}
+
+{% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
   <h1 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h1>
   {% for post in posts %}
