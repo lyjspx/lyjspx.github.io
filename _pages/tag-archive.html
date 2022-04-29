@@ -8,14 +8,16 @@ author_profile: true
 {% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
+<div>
 {% for tag in group_names %}
     {% assign postCount = group_items[forloop.index0] | size %}
-      <i class="fa fa-book" aria-hidden="true"></i>
-      <a href="#{{ tag | slugify }}">{{tag}}&nbsp</a>
-      <span>{{postCount}} </span>
-           
-      <span>&nbsp&nbsp</span>
+      <button class="w3-btn w3-black w3-round-xlarge" style=" margin: 0.05em 0.05em 0.05em 0.05em;">
+        <a href="#{{ tag | slugify }}">{{tag}}</a>
+        <span class="w3-badge w3-margin-left w3-white">{{postCount}} </span>
+ 
+        </button>
 {% endfor %}
+</div>
 
 {% for tag in group_names %}
   {% assign posts = group_items[forloop.index0] %}
