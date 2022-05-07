@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
@@ -18,13 +19,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="A guy knows a little computer science, statistics, and biology">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Yuan&#39;s site">
+<meta property="og:title" content="A personal blog site">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Yuan&#39;s site">
+<meta property="og:site_name" content="A personal blog site">
 <meta property="og:description" content="A guy knows a little computer science, statistics, and biology">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Yuan">
@@ -38,7 +39,7 @@
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Yuan's site</title>
+<title>A personal blog site</title>
   
 
 
@@ -68,11 +69,9 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Yuan's site</h1>
+      <h1 class="site-title">A personal blog site</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">A personal site</p>
-      <img class="custom-logo-image" src="/uploads/Logo_bioinfor.jpg" alt="Yuan's site">
   </div>
 
   <div class="site-nav-right">
@@ -84,7 +83,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">34</span></a></li>
   </ul>
 </nav>
 
@@ -120,6 +119,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Yuan"
+      src="/uploads/Logo_bioinfor.jpg">
   <p class="site-author-name" itemprop="name">Yuan</p>
   <div class="site-description" itemprop="description">A guy knows a little computer science, statistics, and biology</div>
 </div>
@@ -130,11 +131,6 @@
           <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">posts</span>
         </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-          <a href="/categories/">
-        <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
@@ -193,17 +189,17 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/04/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -211,7 +207,7 @@
           
               <span class="post-sticky-flag" title="Sticky">
                 <i class="fa fa-thumbtack"></i>
-              </span><a href="/2022/05/04/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              </span><a href="/2022/05/04/hello-world/" class="post-title-link" itemprop="url">Who</a>
         </h2>
 
         <div class="post-meta-container">
@@ -229,16 +225,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-06 10:46:52" itemprop="dateModified" datetime="2022-05-06T10:46:52-05:00">2022-05-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/test-cat/" itemprop="url" rel="index"><span itemprop="name">test_cat</span></a>
-        </span>
+      <time title="Modified: 2022-05-06 23:05:17" itemprop="dateModified" datetime="2022-05-06T23:05:17-05:00">2022-05-06</time>
     </span>
 
   
@@ -251,19 +238,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+          <h2 id="A-computational-biologist-x2F-bioinformatician"><a href="#A-computational-biologist-x2F-bioinformatician" class="headerlink" title="A computational biologist&#x2F;bioinformatician"></a>A computational biologist&#x2F;bioinformatician</h2><h3 id="Wide-research-interests"><a href="#Wide-research-interests" class="headerlink" title="Wide research interests"></a>Wide research interests</h3><ul>
+<li>Cancer Genomics</li>
+<li>Machine Learning</li>
+<li>Genetic Dissection</li>
+<li>…</li>
+</ul>
 
       
     </div>
@@ -290,25 +270,25 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/05/newpost/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/05/20220507_webhost/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/05/05/newpost/" class="post-title-link" itemprop="url">newpost</a>
+          <a href="/2022/05/05/20220507_webhost/" class="post-title-link" itemprop="url">Web hosting architecture</a>
         </h2>
 
         <div class="post-meta-container">
@@ -332,7 +312,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="To-be-added-soon"><a href="#To-be-added-soon" class="headerlink" title="To be added soon"></a>To be added soon</h2>
       
     </div>
 
@@ -361,17 +341,17 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-07-single-cell-imputation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -434,17 +414,17 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-08-create-docker-volume-device-host-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -520,17 +500,17 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-09-docker-permission-denied-in-lxd-container/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -591,240 +571,20 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-10-add-host-directory-to-lxd-container/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/2021-09-10-add-host-directory-to-lxd-container/" class="post-title-link" itemprop="url">Add Host directory to LXD container</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Host directory can be mounted to a container at read-lony or read-write mode.</p>
-<p>It looks like LXD officially support one-step configuration from some time. In the previous version, we have to go through serveral steps to mount it in read-write mode. See the conversations.</p>
-<p><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/how-to-add-or-mount-directory-in-lxd-linux-container/">Previous version - Example</a></p>
-<p>Now, we can easily define the mounting mode by tuning readonly flag.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config device add container name disk <span class="built_in">source</span>=/data path=/mnt/data <span class="built_in">readonly</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-10-10-unknown-n-max-parameter-in-readtable-base-read-function/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/2021-10-10-unknown-n-max-parameter-in-readtable-base-read-function/" class="post-title-link" itemprop="url">Unknown n_max parameter in read.table base read function</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Last time, I was reading three large tab delimited files into R (4.0.X) using read.table().</p>
-<p>1st: 1.2M rows</p>
-<p>2nd: 0.8M rows</p>
-<p>3rd: 0.3M rows</p>
-<p>The function did not fully parse the first file, and only 0.3M rows were susscefully read into memory. No problem was identified in the latter two files. I did not find any support documentation to elucidate the n_max behavior. </p>
-<p>read.delim and read_delim(tidyverse) did fully parse the files.</p>
-<p>read.table is <strong>NOT</strong> recommended!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-27-excel-misunderstands-string-or-characters-into-dates/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/2021-09-27-excel-misunderstands-string-or-characters-into-dates/" class="post-title-link" itemprop="url">Excel misunderstands String or characters into dates</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Excel automatically formats characters looks like date or time. </p>
-<p>Some IDs, such as PDB ID and gene name, contain characters looks like date. However, Excel is the most efficient tools to quickly view the dataset, especially when datasets is small (&lt;10000 rows).</p>
-<p>A practical way is to open a blank Excel file, import the data file, and specify fields as text.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-09-rstudio-server-docker-commands/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
@@ -887,25 +647,25 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-10-29-rstudio-server-stuck-in-loading-page/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-10-add-host-directory-to-lxd-container/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
       <meta itemprop="name" content="Yuan">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yuan's site">
+      <meta itemprop="name" content="A personal blog site">
       <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Yuan's site">
+      <meta itemprop="name" content="undefined | A personal blog site">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/04/28/2021-10-29-rstudio-server-stuck-in-loading-page/" class="post-title-link" itemprop="url">Rstudio server stuck in loading page</a>
+          <a href="/2022/04/28/2021-09-10-add-host-directory-to-lxd-container/" class="post-title-link" itemprop="url">Add Host directory to LXD container</a>
         </h2>
 
         <div class="post-meta-container">
@@ -929,11 +689,234 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Sometimes, RStudio server always stuck in the loading page, especially exiting abnormally in last run. Use systemctl restart rstudioserver or restart docker do not solve the problem. The reason is that Rstudio automatically resume the last running environment. However, when something wrong, Rstudio always try to resume a bad environment in a dead loop. </p>
+          <p>Host directory can be mounted to a container at read-lony or read-write mode.</p>
+<p>It looks like LXD officially support one-step configuration from some time. In the previous version, we have to go through serveral steps to mount it in read-write mode. See the conversations.</p>
+<p><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/how-to-add-or-mount-directory-in-lxd-linux-container/">Previous version - Example</a></p>
+<p>Now, we can easily define the mounting mode by tuning readonly flag.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config device add container name disk <span class="built_in">source</span>=/data path=/mnt/data <span class="built_in">readonly</span>=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-11-a-full-new-github-repo-in-rstudio/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/28/2021-09-11-a-full-new-github-repo-in-rstudio/" class="post-title-link" itemprop="url">A full new Github repo in Rstudio</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Create Git repo in Rstudio</p>
+<p>Create repo in Github</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;lyjspx&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;lyjspx@126.com&quot;</span></span><br><span class="line"></span><br><span class="line">git remote add origin https://github.com/lyjspx/PROTAC.git</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --set-upstream origin main</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add . &amp;&amp; git commit -m &quot;initial commit&quot; &amp;&amp; git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>To be completed</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-14-linux-with-cloud-drive-dropbox/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/28/2021-09-14-linux-with-cloud-drive-dropbox/" class="post-title-link" itemprop="url">Linux with cloud drive - Dropbox</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Among these popular Cloud Drive service providers, Dropbox is the <strong>only</strong> <strong>one</strong> offering official Linux client. However, errors wll pop up when starting the service.  The reason is some dependencies missing in Ubuntu 20.04.</p>
 <p>Solution:</p>
-<p>Delete cached session files.</p>
-<p>~&#x2F;.local&#x2F;share&#x2F;rstudio&#x2F;session (update version)</p>
-<p>~&#x2F;.rstudio&#x2F;session (old version)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install libc6 libglapi-mesa libxdamage1 libxfixes3 libxcb-glx0 libxcb-dri2-0 libxcb-dri3-0 libxcb-present0 libxcb-sync1 libxshmfence1 libxxf86vm1</span><br></pre></td></tr></table></figure>
+
+<p>The Dropbox will generate a unique one-time link, and user need to copy this link into a browser to authorize the action.</p>
+<p>Once the service running, the Dropbox will sync your library under the home folder.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/28/2021-09-27-excel-misunderstands-string-or-characters-into-dates/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2022/04/28/2021-09-27-excel-misunderstands-string-or-characters-into-dates/" class="post-title-link" itemprop="url">Excel misunderstands String or characters into dates</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-04-28 21:26:35" itemprop="dateCreated datePublished" datetime="2022-04-28T21:26:35-05:00">2022-04-28</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Excel automatically formats characters looks like date or time. </p>
+<p>Some IDs, such as PDB ID and gene name, contain characters looks like date. However, Excel is the most efficient tools to quickly view the dataset, especially when datasets is small (&lt;10000 rows).</p>
+<p>A practical way is to open a blank Excel file, import the data file, and specify fields as text.</p>
 
       
     </div>
