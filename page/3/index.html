@@ -83,7 +83,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">36</span></a></li>
   </ul>
 </nav>
 
@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -214,6 +214,92 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/07/2021-08-07-one-rjava-problem-in-r/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/08/07/2021-08-07-one-rjava-problem-in-r/" class="post-title-link" itemprop="url">One rJava problem in R</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-07 16:44:59" itemprop="dateCreated datePublished" datetime="2021-08-07T16:44:59-05:00">2021-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-07 10:05:38" itemprop="dateModified" datetime="2022-05-07T10:05:38-05:00">2022-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>New version of R has wrong path of libjvm.so</p>
+<p>Error pops up: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libjvm.so: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p>Solution (From <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/28462302">https://stackoverflow.com/questions/28462302</a>):</p>
+<ol>
+<li>Find your R location. It will be stored in <code>rsession-ld-library-path</code> in <code>rserver.conf</code> file. Or just by doing <code>which R</code>. The location usually is <code>/usr/lib64/R/lib</code> or <code>/usr/lib64/microsoft-r/3.3/lib64/R/lib</code></li>
+<li>Find the <code>libjvm.so</code> file which is usually in the <code>usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server</code> path depending on which jre you’re using. Check in $JAVA_HOME environment.</li>
+<li>Create a symlink using <code>ln -s</code> <code>sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so /usr/lib64/microsoft-r/3.3/lib64/R/lib/libjvm.so</code></li>
+<li>Restart R server</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -945,90 +1031,6 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">samtools depth</span><br></pre></td></tr></table></figure>
 <p>However, count all reads including chimeric</p>
 <p>**Warning: Output from samtools fastq and samtools depth can be inconsistent **</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/16/2021-01-16-linux-su-vs-sudo-vs-sudo-i/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A personal blog site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | A personal blog site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/16/2021-01-16-linux-su-vs-sudo-vs-sudo-i/" class="post-title-link" itemprop="url">Linux: 'su' VS 'sudo' VS 'sudo -i'</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-16T00:00:00-06:00">2021-01-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-07 10:06:57" itemprop="dateModified" datetime="2022-05-07T10:06:57-05:00">2022-05-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="su"><a href="#su" class="headerlink" title="su"></a>su</h2><p>enter root mode using root’s password</p>
-<h2 id="sudo"><a href="#sudo" class="headerlink" title="sudo"></a>sudo</h2><p>use super user’s privilege to execuate a command </p>
-<h2 id="sudo-i"><a href="#sudo-i" class="headerlink" title="sudo -i"></a>sudo -i</h2><p>enter root mode using a superuser’s password</p>
-<h2 id="su-VS-sudo-i"><a href="#su-VS-sudo-i" class="headerlink" title="su  VS sudo -i"></a>su  VS sudo -i</h2><p>The passwords used are different<br>su: must use root’s password<br>sudo -i: can use any user’s password who is in admin group</p>
-<h2 id="Enable-x2F-Disable-root-user"><a href="#Enable-x2F-Disable-root-user" class="headerlink" title="Enable&#x2F;Disable root user"></a>Enable&#x2F;Disable root user</h2><p>Some systems did not enable root user (Some users in admin group).<br>Give root password will enable root</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$sudo –i passwd root</span><br><span class="line">Enter new UNIX password: [Set new password for root account]</span><br><span class="line">Retype new UNIX password: [Confirm new password]</span><br></pre></td></tr></table></figure>
-
-<p>Delete password of root will disable root</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo passwd -dl root</span><br></pre></td></tr></table></figure>
 
       
     </div>

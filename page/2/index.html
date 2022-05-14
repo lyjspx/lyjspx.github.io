@@ -83,7 +83,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">35</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">36</span></a></li>
   </ul>
 </nav>
 
@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">35</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -214,6 +214,88 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/10/2021-10-10-unknown-n-max-parameter-in-readtable-base-read-function/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/10/2021-10-10-unknown-n-max-parameter-in-readtable-base-read-function/" class="post-title-link" itemprop="url">Unknown n_max parameter in read.table base read function</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-10 16:44:59" itemprop="dateCreated datePublished" datetime="2021-10-10T16:44:59-05:00">2021-10-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-07 10:03:24" itemprop="dateModified" datetime="2022-05-07T10:03:24-05:00">2022-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Last time, I was reading three large tab delimited files into R (4.0.X) using read.table().</p>
+<p>1st: 1.2M rows</p>
+<p>2nd: 0.8M rows</p>
+<p>3rd: 0.3M rows</p>
+<p>The function did not fully parse the first file, and only 0.3M rows were susscefully read into memory. No problem was identified in the latter two files. I did not find any support documentation to elucidate the n_max behavior. </p>
+<p>read.delim and read_delim(tidyverse) did fully parse the files.</p>
+<p>read.table is <strong>NOT</strong> recommended!</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -935,92 +1017,6 @@
     <div class="post-body" itemprop="articleBody">
           <p>When VPN is on, my virtual instances in VMware lose network connection regardless of Windows or Linux.</p>
 <p>No reasons were identified, and I suspect VPN program has some conflicts with VMware network setting.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/07/2021-08-07-one-rjava-problem-in-r/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A personal blog site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | A personal blog site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/07/2021-08-07-one-rjava-problem-in-r/" class="post-title-link" itemprop="url">One rJava problem in R</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-08-07 16:44:59" itemprop="dateCreated datePublished" datetime="2021-08-07T16:44:59-05:00">2021-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-07 10:05:38" itemprop="dateModified" datetime="2022-05-07T10:05:38-05:00">2022-05-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>New version of R has wrong path of libjvm.so</p>
-<p>Error pops up: </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">libjvm.so: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
-
-<p>Solution (From <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/28462302">https://stackoverflow.com/questions/28462302</a>):</p>
-<ol>
-<li>Find your R location. It will be stored in <code>rsession-ld-library-path</code> in <code>rserver.conf</code> file. Or just by doing <code>which R</code>. The location usually is <code>/usr/lib64/R/lib</code> or <code>/usr/lib64/microsoft-r/3.3/lib64/R/lib</code></li>
-<li>Find the <code>libjvm.so</code> file which is usually in the <code>usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server</code> path depending on which jre you’re using. Check in $JAVA_HOME environment.</li>
-<li>Create a symlink using <code>ln -s</code> <code>sudo ln -s /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64/server/libjvm.so /usr/lib64/microsoft-r/3.3/lib64/R/lib/libjvm.so</code></li>
-<li>Restart R server</li>
-</ol>
 
       
     </div>
