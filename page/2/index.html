@@ -83,7 +83,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">36</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">37</span></a></li>
   </ul>
 </nav>
 
@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -214,6 +214,83 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/20/2021-10-20-gene-name-history/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/20/2021-10-20-gene-name-history/" class="post-title-link" itemprop="url">Gene name history</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-20 16:44:59" itemprop="dateCreated datePublished" datetime="2021-10-20T16:44:59-05:00">2021-10-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-07 10:03:16" itemprop="dateModified" datetime="2022-05-07T10:03:16-05:00">2022-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Nomenclature of gene has a long history.</p>
+<p>Take an id with the name. That will guarantee most gene matched.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -940,83 +1017,6 @@
 </blockquote>
 <h3 id="DrImpute"><a href="#DrImpute" class="headerlink" title="DrImpute"></a>DrImpute</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">X <span class="operator">=</span> read.csv<span class="punctuation">(</span><span class="string">&#x27;/home/ubuntu/download/cart/AHCA.nonimmu.trachea.csv&#x27;</span><span class="punctuation">)</span></span><br><span class="line"><span class="built_in">dim</span><span class="punctuation">(</span>X<span class="punctuation">)</span></span><br><span class="line">X.log <span class="operator">&lt;-</span> <span class="built_in">log</span><span class="punctuation">(</span>X <span class="operator">+</span> <span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">X.log <span class="operator">&lt;-</span> as.matrix<span class="punctuation">(</span>X.log<span class="punctuation">)</span>  </span><br><span class="line">set.seed<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">X.imp <span class="operator">&lt;-</span> DrImpute<span class="punctuation">(</span>X.log<span class="punctuation">,</span> mc.cores<span class="operator">=</span><span class="number">20</span><span class="punctuation">)</span> </span><br><span class="line">X.imp.count <span class="operator">=</span> <span class="built_in">exp</span><span class="punctuation">(</span>X.imp<span class="punctuation">)</span> <span class="operator">-</span> <span class="number">1</span> </span><br><span class="line">write.csv<span class="punctuation">(</span>X.imp.count<span class="punctuation">,</span><span class="string">&#x27;/home/ubuntu/download/cart/AHCA.trachea.drimpute.csv&#x27;</span><span class="punctuation">)</span>   </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/12/2021-08-12-network-issue-raises-for-vpnvmware/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A personal blog site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | A personal blog site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/12/2021-08-12-network-issue-raises-for-vpnvmware/" class="post-title-link" itemprop="url">Network issue raises for VPN+VMware</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-08-12 16:44:59" itemprop="dateCreated datePublished" datetime="2021-08-12T16:44:59-05:00">2021-08-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-07 10:05:28" itemprop="dateModified" datetime="2022-05-07T10:05:28-05:00">2022-05-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>When VPN is on, my virtual instances in VMware lose network connection regardless of Windows or Linux.</p>
-<p>No reasons were identified, and I suspect VPN program has some conflicts with VMware network setting.</p>
 
       
     </div>
