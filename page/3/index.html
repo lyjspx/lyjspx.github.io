@@ -83,7 +83,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">37</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">38</span></a></li>
   </ul>
 </nav>
 
@@ -128,7 +128,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -214,6 +214,86 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/07/2021-09-07-single-cell-imputation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/09/07/2021-09-07-single-cell-imputation/" class="post-title-link" itemprop="url">Single Cell Imputation</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-09-07 16:44:59" itemprop="dateCreated datePublished" datetime="2021-09-07T16:44:59-05:00">2021-09-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-07 10:05:19" itemprop="dateModified" datetime="2022-05-07T10:05:19-05:00">2022-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="scImpute"><a href="#scImpute" class="headerlink" title="scImpute"></a>scImpute</h3><blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">scimpute<span class="punctuation">(</span><span class="comment"># full path to raw count matrix                                                                     </span></span><br><span class="line">    count_path <span class="operator">=</span> <span class="string">&#x27;/home/ubuntu/download/cart/AHCA.nonimmu.trachea.csv&#x27;</span><span class="punctuation">,</span>                                   </span><br><span class="line">    infile <span class="operator">=</span> <span class="string">&quot;csv&quot;</span><span class="punctuation">,</span>           <span class="comment"># format of input file                                                      </span></span><br><span class="line">    outfile <span class="operator">=</span> <span class="string">&quot;csv&quot;</span><span class="punctuation">,</span>          <span class="comment"># format of output file                                                     </span></span><br><span class="line">    out_dir <span class="operator">=</span> <span class="string">&quot;/home/ubuntu/download/cart/AHCA.nonimmu.trachea.scimpute_dropprob0.3&quot;</span><span class="punctuation">,</span> <span class="comment"># full path to output directory                                                                                           </span></span><br><span class="line">    labeled <span class="operator">=</span> <span class="literal">FALSE</span><span class="punctuation">,</span>          <span class="comment"># cell type labels not available                                            </span></span><br><span class="line">    drop_thre <span class="operator">=</span> <span class="number">0.3</span><span class="punctuation">,</span>          <span class="comment"># threshold set on dropout probability                                      </span></span><br><span class="line">    Kcluster <span class="operator">=</span> <span class="number">2</span><span class="punctuation">,</span>             <span class="comment"># 2 cell subpopulations                                                     </span></span><br><span class="line">    ncores <span class="operator">=</span> <span class="number">24</span><span class="punctuation">)</span>              <span class="comment"># number of cores used in parallel computation</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="DrImpute"><a href="#DrImpute" class="headerlink" title="DrImpute"></a>DrImpute</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">X <span class="operator">=</span> read.csv<span class="punctuation">(</span><span class="string">&#x27;/home/ubuntu/download/cart/AHCA.nonimmu.trachea.csv&#x27;</span><span class="punctuation">)</span></span><br><span class="line"><span class="built_in">dim</span><span class="punctuation">(</span>X<span class="punctuation">)</span></span><br><span class="line">X.log <span class="operator">&lt;-</span> <span class="built_in">log</span><span class="punctuation">(</span>X <span class="operator">+</span> <span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">X.log <span class="operator">&lt;-</span> as.matrix<span class="punctuation">(</span>X.log<span class="punctuation">)</span>  </span><br><span class="line">set.seed<span class="punctuation">(</span><span class="number">1</span><span class="punctuation">)</span></span><br><span class="line">X.imp <span class="operator">&lt;-</span> DrImpute<span class="punctuation">(</span>X.log<span class="punctuation">,</span> mc.cores<span class="operator">=</span><span class="number">20</span><span class="punctuation">)</span> </span><br><span class="line">X.imp.count <span class="operator">=</span> <span class="built_in">exp</span><span class="punctuation">(</span>X.imp<span class="punctuation">)</span> <span class="operator">-</span> <span class="number">1</span> </span><br><span class="line">write.csv<span class="punctuation">(</span>X.imp.count<span class="punctuation">,</span><span class="string">&#x27;/home/ubuntu/download/cart/AHCA.trachea.drimpute.csv&#x27;</span><span class="punctuation">)</span>   </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -943,88 +1023,6 @@
           <p>One process listens to one port. </p>
 <p>What about a computer runs multiple tabs&#x2F; browsers?</p>
 <p>For clients, we don’y listen to port 80. For each tab, the browser will assign an arbitray port (usually &gt; 50000) to the tab. Then, each port independently communicates with each tab. So one process still listens to one port.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/30/2021-01-30-raid-setup/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A personal blog site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | A personal blog site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/30/2021-01-30-raid-setup/" class="post-title-link" itemprop="url">RAID setup</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-30 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-30T00:00:00-06:00">2021-01-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-07 10:06:39" itemprop="dateModified" datetime="2022-05-07T10:06:39-05:00">2022-05-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="Two-RAID-solutions"><a href="#Two-RAID-solutions" class="headerlink" title="Two RAID solutions"></a>Two RAID solutions</h2><p>Hardware: PCIE RAID card<br>Software: Linux softwares</p>
-<hr>
-<p>A workstation in our lab uses hardware PCIE RAID card to maintain disks.<br>All disks connect to PCIE RAID card.<br>RAID card is setup in BIOS. </p>
-<p>**Before entering system, virtual drive must be created. **<br>Systems can not identify any physical disks. Only when virtual drive is setup, can system identify drives.</p>
-<p>Foreign in RAID means the disk contains RAID configuration that does not belong to the current RAID card.<br>Foreign configuration can be imported or wiped.</p>
-<hr>
-<p>Software-based RAID is managed by programs (e.g., mdadm).<br>The programs merge mounting points into single virtual drive.</p>
 
       
     </div>
