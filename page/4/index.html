@@ -403,6 +403,96 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/09/2021-01-09-rstudio-server-in-lxd-container-combined-with-conda-environment/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
+      <meta itemprop="name" content="Yuan">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A personal blog site">
+      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | A personal blog site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/01/09/2021-01-09-rstudio-server-in-lxd-container-combined-with-conda-environment/" class="post-title-link" itemprop="url">Rstudio server in LXD container combined with conda environment</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-01-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-09T00:00:00-06:00">2021-01-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2022-05-07 10:07:02" itemprop="dateModified" datetime="2022-05-07T10:07:02-05:00">2022-05-07</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Rstudio server in LXD container combined with conda environment</p>
+<p>I have a conda environment dedicated to the R studio server. Rstudio server is an application service running in the background. </p>
+<p>The start of Rstudio server service cannot combine with conda environment. That means the service will rely on the base environment. </p>
+<p>I attempted to edit systemd file and wrap the start service into a shell script which activates environment first. However, the environment does not start prior to the running of service.</p>
+<p>Some R packages from Bioconductor need system libraries. </p>
+<p>Current solution:</p>
+<p>Use Rstudio server docker image.</p>
+<p>Note:<br>I have a LXD container running on a server.<br>Running docker in a LXD container always pops out OCI errors. A change must be made before running docker.</p>
+<p>In LXD documentation page, <a target="_blank" rel="noopener" href="https://lxd.readthedocs.io/en/latest/">https://lxd.readthedocs.io/en/latest/</a></p>
+<p>How can I run docker inside a LXD container?<br>In order to run Docker inside a LXD container the security.nesting property of the container should be set to true. </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config set &lt;container&gt; security.nesting true</span><br></pre></td></tr></table></figure>
+
+<p>Note that LXD containers cannot load kernel modules, so depending on your Docker configuration you may need to have the needed extra kernel modules loaded by the host.<br>You can do so by setting a comma separate list of kernel modules that your container needs with:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config set &lt;container&gt; linux.kernel_modules &lt;modules&gt;</span><br></pre></td></tr></table></figure>
+<p>We have also received some reports that creating a &#x2F;.dockerenv file in your container can help Docker ignore some errors it’s getting due to running in a nested environment.</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/09/2021-01-09-rstudio-server-docker-common-comands/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -468,96 +558,6 @@ was stdin left open (-i)
 ctrl+c does work, BUT only when -t (without -i) is used to launch the container:
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[berto@g6]$ docker run -t -d --name test python:3.6 /bin/bash -c &#x27;while [ 1 ]; do sleep 30; done;&#x27; 018a228c96d6bf2e73cccaefcf656b02753905b9a859f32e60bdf343bcbe834d </span><br><span class="line">[berto@g6]$ docker attach test ^C </span><br><span class="line">[berto@g6]$</span><br></pre></td></tr></table></figure>
 </code></pre>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/09/2021-01-09-rstudio-server-in-lxd-container-combined-with-conda-environment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/Logo_bioinfor.jpg">
-      <meta itemprop="name" content="Yuan">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A personal blog site">
-      <meta itemprop="description" content="A guy knows a little computer science, statistics, and biology">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | A personal blog site">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/01/09/2021-01-09-rstudio-server-in-lxd-container-combined-with-conda-environment/" class="post-title-link" itemprop="url">Rstudio server in LXD container combined with conda environment</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-01-09T00:00:00-06:00">2021-01-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-05-07 10:07:02" itemprop="dateModified" datetime="2022-05-07T10:07:02-05:00">2022-05-07</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Rstudio server in LXD container combined with conda environment</p>
-<p>I have a conda environment dedicated to the R studio server. Rstudio server is an application service running in the background. </p>
-<p>The start of Rstudio server service cannot combine with conda environment. That means the service will rely on the base environment. </p>
-<p>I attempted to edit systemd file and wrap the start service into a shell script which activates environment first. However, the environment does not start prior to the running of service.</p>
-<p>Some R packages from Bioconductor need system libraries. </p>
-<p>Current solution:</p>
-<p>Use Rstudio server docker image.</p>
-<p>Note:<br>I have a LXD container running on a server.<br>Running docker in a LXD container always pops out OCI errors. A change must be made before running docker.</p>
-<p>In LXD documentation page, <a target="_blank" rel="noopener" href="https://lxd.readthedocs.io/en/latest/">https://lxd.readthedocs.io/en/latest/</a></p>
-<p>How can I run docker inside a LXD container?<br>In order to run Docker inside a LXD container the security.nesting property of the container should be set to true. </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config set &lt;container&gt; security.nesting true</span><br></pre></td></tr></table></figure>
-
-<p>Note that LXD containers cannot load kernel modules, so depending on your Docker configuration you may need to have the needed extra kernel modules loaded by the host.<br>You can do so by setting a comma separate list of kernel modules that your container needs with:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lxc config set &lt;container&gt; linux.kernel_modules &lt;modules&gt;</span><br></pre></td></tr></table></figure>
-<p>We have also received some reports that creating a &#x2F;.dockerenv file in your container can help Docker ignore some errors it’s getting due to running in a nested environment.</p>
 
       
     </div>
